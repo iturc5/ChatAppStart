@@ -10,3 +10,5 @@ import Foundation
 
 //segues
 let TO_LOGIN = "toLogin" // used for the cell identifier
+let TO_CREATE_ACCOUNT = "toCreateAccount"
+let UNWIND = "unwindToChannel"

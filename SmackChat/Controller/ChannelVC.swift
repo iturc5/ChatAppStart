@@ -12,6 +12,7 @@ class ChannelVC: UIViewController {
     
     //outlets
     @IBOutlet weak var loginBtn: UIButton!//outlet to change Login button to username
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}//this is to close the window were we are and go to the main view Controller after make this i have to do a segue on the storyboard
     
     override func viewDidLoad() {
         super.viewDidLoad()
