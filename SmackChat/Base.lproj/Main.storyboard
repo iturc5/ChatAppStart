@@ -102,7 +102,7 @@
                                     <action selector="closePressed:" destination="Qah-6E-pkh" eventType="touchUpInside" id="8n3-FN-uH6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dql-ni-mq9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dql-ni-mq9" customClass="RoundedButton" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="82" y="666" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -113,6 +113,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccntPressed:" destination="Qah-6E-pkh" eventType="touchUpInside" id="hs4-DK-Jw4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGM-5l-qOT">
                                 <rect key="frame" x="157" y="298.66666666666669" width="100" height="130"/>
@@ -126,6 +129,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountBtnPress:" destination="0Pz-FC-ZQA" eventType="touchUpInside" id="kJY-rf-34w"/>
+                                    <action selector="pickAvatarPressed:" destination="Qah-6E-pkh" eventType="touchUpInside" id="Jij-AI-rUA"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RET-4o-McJ">
@@ -206,6 +210,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountBtnPress:" destination="0Pz-FC-ZQA" eventType="touchUpInside" id="INJ-cr-3n5"/>
+                                    <action selector="pickBGColor:" destination="Qah-6E-pkh" eventType="touchUpInside" id="GhB-YX-PIn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -230,6 +235,10 @@
                         <viewLayoutGuide key="safeArea" id="luh-u1-tK3"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="FTN-Lk-eEL" id="H6a-LC-dTO"/>
+                        <outlet property="passTxt" destination="dq9-Bm-NNA" id="pKG-fd-6qX"/>
+                        <outlet property="userImg" destination="2T3-Xu-9c2" id="Qv0-cY-bs8"/>
+                        <outlet property="usernameTxt" destination="WtT-Lx-Y1T" id="qrA-J7-7bc"/>
                         <segue destination="RjT-PY-03w" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="qfW-JB-IlX"/>
                     </connections>
                 </viewController>
@@ -371,7 +380,7 @@
                                     <action selector="closePress:" destination="0Pz-FC-ZQA" eventType="touchUpInside" id="hzY-P9-tYm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfM-y6-5Fq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfM-y6-5Fq" customClass="RoundedButton" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="82" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

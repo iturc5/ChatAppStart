@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmackChat/Controller/CreateAccountVC.swift"
+            timestampString = "526262138.468699"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmackChat.CreateAccountVC.__deallocating_deinit"
+                  moduleName = "SmackChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Controller/CreateAccountVC.swift"
+                  timestampString = "526261145.979784"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmackChat.CreateAccountVC.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SmackChat.CreateAccountVC"
+                  moduleName = "SmackChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Controller/CreateAccountVC.swift"
+                  timestampString = "526261145.982171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmackChat.CreateAccountVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SmackChat.CreateAccountVC"
+                  moduleName = "SmackChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Controller/CreateAccountVC.swift"
+                  timestampString = "526261145.984453"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmackChat.CreateAccountVC.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;SmackChat.CreateAccountVC&gt;"
+                  moduleName = "SmackChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Controller/CreateAccountVC.swift"
+                  timestampString = "526261145.986721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmackChat.CreateAccountVC.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;SmackChat.CreateAccountVC&gt;"
+                  moduleName = "SmackChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Controller/CreateAccountVC.swift"
+                  timestampString = "526261145.98934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
