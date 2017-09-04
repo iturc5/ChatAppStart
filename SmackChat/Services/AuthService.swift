@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class AuthService {
     static let instance = AuthService()
@@ -51,7 +52,7 @@ class AuthService {
             "password": password
         ]
  //creating a web request
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.defaults, headers: header).responseString{(response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString{(response) in
             
             if response.result.error == nil {
                 completion(true)
