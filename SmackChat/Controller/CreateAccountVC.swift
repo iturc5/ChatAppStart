@@ -22,9 +22,16 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {//to reload the data selected from the avatarName image
+        if UserDataService.instance.avatarName != "" {//to check if the user selECTED a item from the avatarName item
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)// seting up the interface with the code
+            avatarName = UserDataService.instance.avatarName//and seting the image name and seting the item to the profile image
+        }
+    }
+    
     @IBAction func createAccntPressed(_ sender: Any) {
 //first step to conect the user interface with the web request it the i create in the authservice.swift
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
@@ -49,6 +56,7 @@ class CreateAccountVC: UIViewController {
         
     }
     @IBAction func pickAvatarPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     @IBAction func pickBGColor(_ sender: Any) {
     }
