@@ -194,7 +194,7 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="2T3-Xu-9c2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="2T3-Xu-9c2" customClass="CircleImage" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="157" y="298.66666666666669" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="26m-46-osh"/>
@@ -213,6 +213,10 @@
                                     <action selector="pickBGColor:" destination="Qah-6E-pkh" eventType="touchUpInside" id="GhB-YX-PIn"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-OC-QB4">
+                                <rect key="frame" x="188.66666666666666" y="264.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -221,6 +225,7 @@
                             <constraint firstItem="wQD-X1-QZ2" firstAttribute="centerX" secondItem="Wvf-iV-NEu" secondAttribute="centerX" id="9zg-7m-15T"/>
                             <constraint firstItem="2T3-Xu-9c2" firstAttribute="centerX" secondItem="Wvf-iV-NEu" secondAttribute="centerX" id="COU-Zj-yJw"/>
                             <constraint firstItem="luh-u1-tK3" firstAttribute="trailing" secondItem="BrQ-eG-toV" secondAttribute="trailing" constant="16" id="Ewv-WS-bY7"/>
+                            <constraint firstItem="1vW-OC-QB4" firstAttribute="centerY" secondItem="Wvf-iV-NEu" secondAttribute="centerY" constant="-85" id="F8I-0x-9n9"/>
                             <constraint firstItem="3EF-9o-bJU" firstAttribute="top" secondItem="luh-u1-tK3" secondAttribute="top" constant="40" id="LaJ-yh-6Xs"/>
                             <constraint firstItem="tGM-5l-qOT" firstAttribute="width" secondItem="2T3-Xu-9c2" secondAttribute="width" id="SUN-WZ-epR"/>
                             <constraint firstItem="BrQ-eG-toV" firstAttribute="top" secondItem="luh-u1-tK3" secondAttribute="top" constant="8" id="Wo5-hl-MQE"/>
@@ -228,6 +233,7 @@
                             <constraint firstItem="2T3-Xu-9c2" firstAttribute="top" secondItem="RET-4o-McJ" secondAttribute="bottom" constant="40" id="ZZH-nf-wkZ"/>
                             <constraint firstItem="wQD-X1-QZ2" firstAttribute="top" secondItem="tGM-5l-qOT" secondAttribute="bottom" constant="4" id="evE-fj-95A"/>
                             <constraint firstItem="RET-4o-McJ" firstAttribute="centerX" secondItem="Wvf-iV-NEu" secondAttribute="centerX" id="fE5-qM-tzp"/>
+                            <constraint firstItem="1vW-OC-QB4" firstAttribute="centerX" secondItem="Wvf-iV-NEu" secondAttribute="centerX" id="oH2-r1-U0Q"/>
                             <constraint firstItem="tGM-5l-qOT" firstAttribute="top" secondItem="2T3-Xu-9c2" secondAttribute="top" id="sbR-rB-9EE"/>
                             <constraint firstItem="dql-ni-mq9" firstAttribute="centerX" secondItem="Wvf-iV-NEu" secondAttribute="centerX" id="urh-ff-QIW"/>
                             <constraint firstItem="tGM-5l-qOT" firstAttribute="centerX" secondItem="Wvf-iV-NEu" secondAttribute="centerX" id="vnh-2j-C2l"/>
@@ -237,6 +243,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="FTN-Lk-eEL" id="H6a-LC-dTO"/>
                         <outlet property="passTxt" destination="dq9-Bm-NNA" id="pKG-fd-6qX"/>
+                        <outlet property="spinner" destination="1vW-OC-QB4" id="Wkz-GH-KHD"/>
                         <outlet property="userImg" destination="2T3-Xu-9c2" id="Qv0-cY-bs8"/>
                         <outlet property="usernameTxt" destination="WtT-Lx-Y1T" id="qrA-J7-7bc"/>
                         <segue destination="RjT-PY-03w" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="qfW-JB-IlX"/>
@@ -372,7 +379,7 @@
                                     <action selector="loginBtnPress:" destination="0PR-kg-mT7" eventType="touchUpInside" id="5dD-cD-JFG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-5X-97L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-5X-97L" customClass="CircleImage" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="641" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="V4M-3H-zib"/>
