@@ -23,7 +23,16 @@ class ChannelVC: UIViewController {
     }
 
     @IBAction func loginBtnPress(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)//the login button segue
+        if AuthService.instance.isLoggedIn {
+      //to show the XIBs view we create for the profile view
+            let profile = ProfileVCViewController()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)//the login button segue
+        }
+        
+        
     }
     
     @objc func userDataDidChange(_ notif: Notification){//this is an observer func were we set the new values to the user interface 
