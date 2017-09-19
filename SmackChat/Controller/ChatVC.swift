@@ -26,6 +26,12 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())//slide finger left gesture to open de menu too
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())//tep geture build in to close menu
         
+//to save the info in the app even if you close the app 1
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByEmail(completion: { (success) in
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+            })
+        }
     }
 
  

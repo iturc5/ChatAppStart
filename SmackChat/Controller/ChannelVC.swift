@@ -21,6 +21,10 @@ class ChannelVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)//to do something with the login notidication
 
     }
+//to save the info in the app even if you close the app 2
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
+    }
 
     @IBAction func loginBtnPress(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
@@ -36,6 +40,11 @@ class ChannelVC: UIViewController {
     }
     
     @objc func userDataDidChange(_ notif: Notification){//this is an observer func were we set the new values to the user interface 
+        setupUserInfo()
+    }
+
+// made this func to re-use the same code in multiple functions 
+    func setupUserInfo(){
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
@@ -46,5 +55,4 @@ class ChannelVC: UIViewController {
             userImg.backgroundColor = UIColor.clear
         }
     }
-
 }
