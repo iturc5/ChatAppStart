@@ -103,11 +103,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmackChat/Services/AuthService.swift"
-            timestampString = "526443700.683222"
+            timestampString = "527483502.763725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1"
-            endingLineNumber = "1"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -165,84 +165,6 @@
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Services/AuthService.swift"
                   timestampString = "526349091.040523"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmackChat/Services/AuthService.swift"
-            timestampString = "526443700.683288"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2"
-            endingLineNumber = "2"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmackChat.AuthService.__allocating_init() -&gt; SmackChat.AuthService"
-                  moduleName = "SmackChat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Services/AuthService.swift"
-                  timestampString = "526349093.262723"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmackChat.AuthService.deinit"
-                  moduleName = "SmackChat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Services/AuthService.swift"
-                  timestampString = "526349093.265376"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmackChat.AuthService.__deallocating_deinit"
-                  moduleName = "SmackChat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Services/AuthService.swift"
-                  timestampString = "526349093.267941"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmackChat.AuthService.init() -&gt; SmackChat.AuthService"
-                  moduleName = "SmackChat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/davidortiz/Desktop/Learn%20IOS%2011/SmackChat/ChatAppStart/SmackChat/Services/AuthService.swift"
-                  timestampString = "526349093.271971"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
