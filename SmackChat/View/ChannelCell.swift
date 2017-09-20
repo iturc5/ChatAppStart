@@ -27,7 +27,7 @@ class ChannelCell: UITableViewCell {
             self.layer.backgroundColor = UIColor.clear.cgColor
         }
     }
-    
+    //this is to conect the UI with the code 
     func configureCell(channel: Channel){
         let title = channel.channelTitle ?? ""
         channelName.text = "#\(title)"

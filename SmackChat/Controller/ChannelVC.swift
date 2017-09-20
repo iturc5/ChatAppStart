@@ -29,6 +29,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         setupUserInfo()
     }
 
+//this is to open the add channel xbis file and add a channel
+    @IBAction func addChannelPressed(_ sender: Any) {
+        let addChannel = AddChannelVCViewController()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
+    }
+    
     @IBAction func loginBtnPress(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
       //to show the XIBs view we create for the profile view
@@ -58,7 +65,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             userImg.backgroundColor = UIColor.clear
         }
     }
-    
+//table view stuff we needed 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
             let channel = MessageService.instance.channels[indexPath.row]

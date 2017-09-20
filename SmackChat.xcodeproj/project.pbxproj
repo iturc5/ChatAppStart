@@ -18,6 +18,8 @@
 		883692151F5902DB0040D72C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883692141F5902DB0040D72C /* LoginVC.swift */; };
 		887928111F5E1D7800DAA62B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887928101F5E1D7800DAA62B /* RoundedButton.swift */; };
 		887C73331F71F75D00787958 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C73321F71F75D00787958 /* ChannelCell.swift */; };
+		887C73361F71FF6B00787958 /* AddChannelVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C73341F71FF6B00787958 /* AddChannelVCViewController.swift */; };
+		887C73371F71FF6B00787958 /* AddChannelVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887C73351F71FF6B00787958 /* AddChannelVCViewController.xib */; };
 		887F92EE1F60D7A00022D410 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F92ED1F60D7A00022D410 /* UserDataService.swift */; };
 		889D23BE1F5631E0006022CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889D23BD1F5631E0006022CB /* AppDelegate.swift */; };
 		889D23C31F5631E0006022CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889D23C11F5631E0006022CB /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		883692141F5902DB0040D72C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		887928101F5E1D7800DAA62B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		887C73321F71F75D00787958 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		887C73341F71FF6B00787958 /* AddChannelVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVCViewController.swift; sourceTree = "<group>"; };
+		887C73351F71FF6B00787958 /* AddChannelVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVCViewController.xib; sourceTree = "<group>"; };
 		887F92ED1F60D7A00022D410 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		889D23BA1F5631E0006022CB /* SmackChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmackChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889D23BD1F5631E0006022CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				8804064E1F5B435400CC0A10 /* CreateAccountVC.swift */,
 				8817D0161F621D6500FE7F67 /* AvatarPickerVC.swift */,
 				88B248331F6B5E210006AB46 /* ProfileVCViewController.swift */,
+				887C73341F71FF6B00787958 /* AddChannelVCViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				88B248341F6B5E220006AB46 /* ProfileVCViewController.xib */,
+				887C73351F71FF6B00787958 /* AddChannelVCViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887C73371F71FF6B00787958 /* AddChannelVCViewController.xib in Resources */,
 				889D23C81F5631E0006022CB /* LaunchScreen.storyboard in Resources */,
 				88B248361F6B5E220006AB46 /* ProfileVCViewController.xib in Resources */,
 				889D23C51F5631E0006022CB /* Assets.xcassets in Resources */,
@@ -338,6 +345,7 @@
 				88F117CB1F5D89D3004BAD18 /* AuthService.swift in Sources */,
 				883692151F5902DB0040D72C /* LoginVC.swift in Sources */,
 				883692101F5780E30040D72C /* GradientView.swift in Sources */,
+				887C73361F71FF6B00787958 /* AddChannelVCViewController.swift in Sources */,
 				8817D0191F621F9200FE7F67 /* AvatarCell.swift in Sources */,
 				889D23BE1F5631E0006022CB /* AppDelegate.swift in Sources */,
 				889D23DA1F56460F006022CB /* SWRevealViewController.m in Sources */,
