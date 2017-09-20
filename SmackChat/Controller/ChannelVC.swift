@@ -8,17 +8,20 @@
 
 import UIKit
 
-class ChannelVC: UIViewController {
+class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //outlets
     @IBOutlet weak var loginBtn: UIButton!//outlet to change Login button to username
     @IBOutlet weak var userImg: CircleImage!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}//this is to close the window were we are and go to the main view Controller after make this i have to do a segue on the storyboard
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60// To show less content when the menu opens up
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)//to do something with the login notidication
+        tableView.delegate = self
+        tableView.dataSource = self
 
     }
 //to save the info in the app even if you close the app 2
@@ -55,4 +58,29 @@ class ChannelVC: UIViewController {
             userImg.backgroundColor = UIColor.clear
         }
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
+            let channel = MessageService.instance.channels[indexPath.row]
+            cell.configureCell(channel: channel)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.channels.count
+    }
+    
+    
+    
+    
+    
+    
+    
 }
