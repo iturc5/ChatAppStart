@@ -22,7 +22,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)//to do something with the login notidication
         tableView.delegate = self
         tableView.dataSource = self
-
+//addinfg the channels top the table view from the socketService.swift file 
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
 //to save the info in the app even if you close the app 2
     override func viewDidAppear(_ animated: Bool) {
