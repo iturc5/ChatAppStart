@@ -23,6 +23,8 @@ let smackPurplePlaceholder = #colorLiteral(red: 0.2588235294, green: 0.329411764
 
 //notification consstants
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelsSelected")
 
 //segues
 let TO_LOGIN = "toLogin" // used for the cell identifier

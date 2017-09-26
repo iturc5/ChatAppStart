@@ -14,6 +14,7 @@ class MessageService {
     static let instance = MessageService()
     //this is the array were we will append the channels we create
     var channels = [Channel]()
+    var selectedChannel : Channel?
     
     func findAllChannel(completion: @escaping CompletionHandler){
         //making a request from the url... using the methots encoding and the header and the response
@@ -39,6 +40,8 @@ class MessageService {
                         //creating an object with the loop values (user data)
                         self.channels.append(channel)
                     }
+//this notification is to let the app know that the user logged in so it will show the channels from the data base
+                    NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                     completion(true)
                 }
             } else {
@@ -46,6 +49,10 @@ class MessageService {
                 debugPrint(response.result.error as Any)
             }
         }
+    }
+//to remove the channels after we logout
+    func clearChannels(){
+        channels.removeAll()
     }
 }
 

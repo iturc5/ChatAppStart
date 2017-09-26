@@ -18,8 +18,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60// To show less content when the menu opens up
-        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)//to do something with the login notidication
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)// this is an observer tha manage the notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNELS_LOADED, object: nil)//notif to let the app know that the channels will load
         tableView.delegate = self
         tableView.dataSource = self
 //addinfg the channels top the table view from the socketService.swift file 
@@ -36,9 +38,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 //this is to open the add channel xbis file and add a channel
     @IBAction func addChannelPressed(_ sender: Any) {
-        let addChannel = AddChannelVCViewController()
-        addChannel.modalPresentationStyle = .custom
-        present(addChannel, animated: true, completion: nil)
+        if AuthService.instance.isLoggedIn {
+            let addChannel = AddChannelVCViewController()
+            addChannel.modalPresentationStyle = .custom
+            present(addChannel, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func loginBtnPress(_ sender: Any) {
@@ -53,9 +58,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
     }
-    
+ //selector functions
     @objc func userDataDidChange(_ notif: Notification){//this is an observer func were we set the new values to the user interface 
         setupUserInfo()
+    }
+    
+    @objc func channelsLoaded(_ notif: Notification){
+        tableView.reloadData()
     }
 
 // made this func to re-use the same code in multiple functions 
@@ -68,6 +77,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
+            tableView.reloadData()
         }
     }
 //table view stuff we needed 
@@ -88,8 +98,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MessageService.instance.channels.count
     }
-    
-    
+//to show the conten of the channel
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let channel = MessageService.instance.channels[indexPath.row]//asigned what we select to the variable channel
+        MessageService.instance.selectedChannel = channel //then asigning the varible to whag we selected
+        NotificationCenter.default.post(name: NOTIF_CHANNEL_SELECTED, object: nil)//this will notify what channel we selected
+        self.revealViewController().revealToggle(true)//the func to show the content
+    }
     
     
     
