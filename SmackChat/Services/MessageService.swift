@@ -14,6 +14,7 @@ class MessageService {
     static let instance = MessageService()
     //this is the array were we will append the channels we create
     var channels = [Channel]()
+    var messages = [Message]()//to get messages from the channels
     var selectedChannel : Channel?
     
     func findAllChannel(completion: @escaping CompletionHandler){
@@ -50,9 +51,45 @@ class MessageService {
             }
         }
     }
+    func findAllMessageForChannel(channelId: String, completion: @escaping CompletionHandler) {
+        Alamofire.request("\(URL_GET_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                self.clearMessages()//to clear the messages before get the new message data
+                guard let data = response.data else { return }//unwraping the data making sure there is something in it
+                if let json = JSON(data: data).array {//extracting the data that we get from the API or server
+                    for item in json {//looping trough the API data
+                        let messageBody = item["messageBody"].stringValue
+                        let channelId = item["channelId"].stringValue
+                        let id = item["_id"].stringValue
+                        let userName = item["userName"].stringValue
+                        let userAvatar = item["userAvatar"].stringValue
+                        let userAvatarColor = item["userAvatarColor"].stringValue
+                        let timeStamp = item["timeStamp"].stringValue
+                        //adding the data to the message constant
+                        let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
+                        self.messages.append(message)//adding the message to the array
+                    }
+                    print(self.messages)
+                    completion(true)
+                }
+            } else {
+                debugPrint(response.result.error as Any)
+                completion(false)
+            }
+        }
+    }
+    
 //to remove the channels after we logout
     func clearChannels(){
         channels.removeAll()
     }
+//to remove the messages from the channels after we select different channels
+    func clearMessages(){
+        messages.removeAll()
+    }
+    
+    
+    
 }
 
