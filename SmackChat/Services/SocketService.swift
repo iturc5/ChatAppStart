@@ -46,6 +46,24 @@ class SocketService: NSObject {
         }
     }
     
+    func addMessage(messageBody: String, userId: String, channelId: String, completion: @escaping CompletionHandler){
+        let user = UserDataService.instance
+        //send the message to the server
+        socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
+        completion(true)
+        //recive the message from the server so it will showed to on the app
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

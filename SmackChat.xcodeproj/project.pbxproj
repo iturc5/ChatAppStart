@@ -32,6 +32,7 @@
 		88B248351F6B5E220006AB46 /* ProfileVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B248331F6B5E210006AB46 /* ProfileVCViewController.swift */; };
 		88B248361F6B5E220006AB46 /* ProfileVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B248341F6B5E220006AB46 /* ProfileVCViewController.xib */; };
 		88BCFADD1F7B392500FCF472 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCFADC1F7B392500FCF472 /* Message.swift */; };
+		88BE7C821F832E2900D70372 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE7C811F832E2900D70372 /* KeyboardBoundView.swift */; };
 		88F117CB1F5D89D3004BAD18 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F117CA1F5D89D3004BAD18 /* AuthService.swift */; };
 		92507B887C095BFE347312CE /* Pods_SmackChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B57224C13C3BAA23512C07E /* Pods_SmackChat.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		88B248331F6B5E210006AB46 /* ProfileVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCViewController.swift; sourceTree = "<group>"; };
 		88B248341F6B5E220006AB46 /* ProfileVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCViewController.xib; sourceTree = "<group>"; };
 		88BCFADC1F7B392500FCF472 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		88BE7C811F832E2900D70372 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		88F117CA1F5D89D3004BAD18 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		FCEFF094D17583210436FF75 /* Pods-SmackChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				8817D0181F621F9200FE7F67 /* AvatarCell.swift */,
 				8800EB471F6420CC0085FD4C /* CircleImage.swift */,
 				887C73321F71F75D00787958 /* ChannelCell.swift */,
+				88BE7C811F832E2900D70372 /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BE7C821F832E2900D70372 /* KeyboardBoundView.swift in Sources */,
 				882F98DB1F72AB50009599C6 /* SocketService.swift in Sources */,
 				889D23D71F5642DC006022CB /* ChatVC.swift in Sources */,
 				887C73331F71F75D00787958 /* ChannelCell.swift in Sources */,

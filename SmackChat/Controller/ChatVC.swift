@@ -19,10 +19,16 @@ class ChatVC: UIViewController {
     
     @IBOutlet weak var menuBtn: UIButton!//humburguer button
     @IBOutlet weak var chnnelNameLabel: UILabel!
+    @IBOutlet weak var messageTextBox: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //instansiate the keyboard binding file so the view goes up with the keyboard
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
+        //  end of closing the keyboard and binding the keyboard
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)//this is to open a left side menu bar using reveal view contrller
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())//slide finger left gesture to open de menu too
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())//tep geture build in to close menu
@@ -48,9 +54,13 @@ class ChatVC: UIViewController {
             chnnelNameLabel.text = "Please Log In"
         }
     }
-//selector function for the observer listener
+//selector function for the observer listener --> selector
     @objc func channelSelected(_ notif: Notification){
         updateWithChannel()
+    }
+//to close the keyboard with a tap when we are texting
+    @objc func handleTap(){
+        view.endEditing(true)
     }
 //the func that will call the observer obove func channelselected --> & add the title of the channel we selected to the tableView title
     func updateWithChannel(){
@@ -59,7 +69,21 @@ class ChatVC: UIViewController {
         getMessages()
     }
     
-//reusable func
+    @IBAction func sendMsgPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = messageTextBox.text else { return }
+            
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
+                if success {
+                    self.messageTextBox.text = ""
+                    self.messageTextBox.resignFirstResponder()
+                }
+            })
+        }
+    }
+    
+    //reusable func
     func onLoginGetMessages(){
         MessageService.instance.findAllChannel { (success) in
             if success {//this means that if we are log in and theres channels created it will showed but if theres no channels it will show the messages on else statement
